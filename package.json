@@ -1,0 +1,52 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "storybook": "start-storybook -p 7007",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@react-native-community/checkbox": "^0.5.7",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.11.7",
+    "@react-navigation/native": "^5.9.2",
+    "@react-navigation/stack": "^5.14.2",
+    "apercu-font": "^1.0.0",
+    "expo": "~40.0.0",
+    "expo-font": "^8.4.0",
+    "expo-status-bar": "~1.0.3",
+    "json-calendar": "^1.9.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+    "react-native-calendario": "^2.1.1",
+    "react-native-elements": "^3.2.0",
+    "react-native-gesture-handler": "^1.8.0",
+    "react-native-hide-show-password-input": "^1.2.0",
+    "react-native-reanimated": "^1.13.2",
+    "react-native-safe-area-context": "^3.1.9",
+    "react-native-screens": "^2.15.2",
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-text-carousel": "0.0.1",
+    "react-native-vector-icons": "^8.0.0",
+    "react-native-web": "~0.13.12"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.9.0",
+    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-knobs": "^5.3.21",
+    "@storybook/addon-links": "^5.3.21",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.23",
+    "@storybook/react-native": "^5.3.23",
+    "@storybook/react-native-server": "^5.3.23",
+    "babel-loader": "^8.2.2"
+  },
+  "private": true
+}
