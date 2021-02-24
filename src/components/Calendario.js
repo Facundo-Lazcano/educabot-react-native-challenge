@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { View, StyleSheet, Text, Dimensions, TouchableOpacity, FlatList, SafeAreaView, ScrollView } from 'react-native'
 import { data } from './calendarioData'
-import { AntDesign, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons'
+import { AntDesign } from '@expo/vector-icons'
+import IconoLectura from './iconos/IconoLectura'
+import IconoLapiz from './iconos/IconoLapiz'
 // import Calendar from 'json-calendar'
 
 const { height } = Dimensions.get('window')
@@ -32,14 +34,14 @@ const Calendario = () => {
           if (clase.tipo === 2) {
             return (
               <View style={{ height: 24, width: 24, backgroundColor: 'rgba(1, 206, 170,0.15)', borderRadius: 3, justifyContent: 'center', alignItems: 'center' }}>
-                <MaterialIcons size={15} name='menu-book' color='rgba(1, 206, 170, 1)' />
+                <IconoLectura />
               </View>
             )
           }
           if (clase.tipo === 3) {
             return (
-              <View style={{ height: 24, width: 24, backgroundColor: 'rgba(255, 184, 0, 0.15)', borderRadius: 3, justifyContent: 'center', alignItems: 'center' }}>
-                <MaterialCommunityIcons size={15} name='lead-pencil' color='rgba(255, 184, 0, 1)' />
+              <View style={{ position: 'relative', height: 24, width: 24, backgroundColor: 'rgba(255, 184, 0, 0.15)', borderRadius: 3, justifyContent: 'center', alignItems: 'center' }}>
+                <IconoLapiz />
               </View>
             )
           }

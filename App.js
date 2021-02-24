@@ -11,7 +11,11 @@ import PeopleScreen from './src/screens/main/peopleScreen'
 import MessagesScreen from './src/screens/main/messagesScreen'
 import PriceScreen from './src/screens/main/priceScreen'
 import SettingsScreen from './src/screens/main/settingsScreen'
-import { FontAwesome5, MaterialIcons, MaterialCommunityIcons, Feather, Ionicons } from '@expo/vector-icons'
+import IconoHome from './src/components/iconos/IconoHome'
+import IconoPeople from './src/components/iconos/IconoPeople'
+import IconoMensajes from './src/components/iconos/IconoMensajes'
+import IconoPrice from './src/components/iconos/IconoPrice'
+import IconoSettings from './src/components/iconos/IconoSettings'
 
 const mainNavigator = createBottomTabNavigator()
 const Stack = createStackNavigator()
@@ -41,7 +45,7 @@ function mainFlow () {
     <Tab.Navigator tabBarOptions={{
       showLabel: false,
       activeTintColor: 'rgba(39, 168, 255, 0.3)',
-      inactiveTintColor: '#e1e1e1'
+      inactiveTintColor: '#6D7878'
 
     }}
     >
@@ -49,13 +53,13 @@ function mainFlow () {
         name='home' component={HomeScreen}
         options={{
           tabBarIcon: ({ focused, color }) => (
-            <View>
+            <View style={{ position: 'relative' }}>
               {
               focused
-                ? <View style={{ height: 4, width: 64, position: 'absolute', top: -10, left: -16, backgroundColor: '#27A8FF' }} />
+                ? <View style={{ height: 4, width: 64, position: 'absolute', bottom: 20, right: -38.5, backgroundColor: '#27A8FF' }} />
                 : null
             }
-              <MaterialIcons name='home-filled' size={30} color={color} />
+              <IconoHome color={color} size={24} />
             </View>
           )
         }}
@@ -67,10 +71,10 @@ function mainFlow () {
             <View>
               {
               focused
-                ? <View style={{ height: 4, width: 64, position: 'absolute', top: -10, left: -16, backgroundColor: '#27A8FF' }} />
+                ? <View style={{ height: 4, width: 64, position: 'absolute', bottom: 20, right: -38.5, backgroundColor: '#27A8FF' }} />
                 : null
             }
-              <FontAwesome5 name='users' size={30} color={color} />
+              <IconoPeople color={color} size={24} />
 
             </View>
           )
@@ -80,15 +84,16 @@ function mainFlow () {
         name='messages' component={MessagesScreen}
         options={{
           tabBarIcon: ({ focused, color }) => (
-            <View>
+            <View style={{ position: 'relative' }}>
               {
               focused
-                ? <View style={{ height: 4, width: 64, position: 'absolute', top: -10, left: -16, backgroundColor: '#27A8FF' }} />
+                ? <View style={{ height: 4, width: 64, position: 'absolute', bottom: 20, right: -38.5, backgroundColor: '#27A8FF' }} />
                 : null
             }
-              <Ionicons name='chatbox-outline' size={30} color={color} />
-              <MaterialCommunityIcons name='text-short' size={24} color={color} style={{ position: 'absolute', zIndex: 99, left: 2 }} />
-              <View style={{ height: 6, width: 6, borderRadius: 50, borderColor: 'white', borderWidth: 3, backgroundColor: '#F45C3A', position: 'absolute', top: 1, right: 0, zIndex: 9999, padding: 2 }} />
+              <View style={{ position: 'relative' }}>
+                <IconoMensajes color={color} size={24} />
+                <View style={{ height: 6, width: 6, borderRadius: 50, borderColor: 'white', borderWidth: 3, backgroundColor: '#F45C3A', position: 'absolute', top: -11.5, left: 10, zIndex: 9999, padding: 2 }} />
+              </View>
             </View>
           )
         }}
@@ -97,14 +102,16 @@ function mainFlow () {
         name='price' component={PriceScreen}
         options={{
           tabBarIcon: ({ focused, color }) => (
-            <View>
+            <View style={{ position: 'relative' }}>
               {
               focused
-                ? <View style={{ height: 4, width: 64, position: 'absolute', top: -10, left: -16, backgroundColor: '#27A8FF' }} />
+                ? <View style={{ height: 4, width: 64, position: 'absolute', bottom: 20, right: -38.5, backgroundColor: '#27A8FF' }} />
                 : null
             }
-              <MaterialCommunityIcons name='currency-usd-circle-outline' size={30} color={color} />
-              <View style={{ height: 6, width: 6, borderRadius: 50, borderColor: 'white', borderWidth: 3, backgroundColor: '#F45C3A', position: 'absolute', top: 1, right: 0, zIndex: 9999, padding: 2 }} />
+              <View style={{ position: 'relative' }}>
+                <IconoPrice color={color} size={24} />
+                <View style={{ height: 6, width: 6, borderRadius: 50, borderColor: 'white', borderWidth: 3, backgroundColor: '#F45C3A', position: 'absolute', top: -11.5, left: 10, zIndex: 9999, padding: 2 }} />
+              </View>
             </View>
           )
         }}
@@ -113,13 +120,13 @@ function mainFlow () {
         name='settings' component={SettingsScreen}
         options={{
           tabBarIcon: ({ focused, color }) => (
-            <View>
+            <View style={{ position: 'relative' }}>
               {
               focused
-                ? <View style={{ height: 4, width: 64, position: 'absolute', top: -10, left: -16, backgroundColor: '#27A8FF' }} />
+                ? <View style={{ height: 4, width: 64, position: 'absolute', bottom: 20, right: -38.5, backgroundColor: '#27A8FF' }} />
                 : null
             }
-              <Feather name='settings' size={30} color={color} />
+              <IconoSettings size={24} color={color} />
 
             </View>
           )
